@@ -1,0 +1,6 @@
+crewai
+crewai-tools
+setuptools
+langchain-groq
+load-dotenv
+python-docx
