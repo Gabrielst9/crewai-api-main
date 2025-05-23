@@ -32,7 +32,7 @@ def coletar_inputs() -> Dict[str, str]:
     campos_obrigatorios = ['escola', 'professor', 'tema', 'serie']
     for campo in campos_obrigatorios:
         if not inputs[campo]:
-            print(f"\n❌ Erro: O campo '{campo}' é obrigatório!")
+            print(f"\nErro: O campo '{campo}' é obrigatório!")
             sys.exit(1)
     
     return inputs
@@ -58,8 +58,8 @@ def executar_crew(inputs: Dict[str, str]) -> Dict[str, str]:
             verbose=True
         )
         
-        print("✅ Agentes configurados com sucesso!")
-        print("\n🚀 Executando o fluxo de geração...\n")
+        print("Agentes configurados com sucesso!")
+        print("\nExecutando o fluxo de geração...\n")
         
         result = crew.kickoff()
         
@@ -73,7 +73,7 @@ def executar_crew(inputs: Dict[str, str]) -> Dict[str, str]:
         }
         
     except Exception as e:
-        print(f"\n❌ Erro durante a execução: {str(e)}")
+        print(f"\nErro durante a execução: {str(e)}")
         sys.exit(1)
 
 def main():
@@ -89,9 +89,9 @@ def main():
         )
         
         if output_path:
-            print(f"\n✅ Documento gerado com sucesso em: {output_path}")
+            print(f"\nDocumento gerado com sucesso em: {output_path}")
         else:
-            print("\n❌ Falha ao gerar o documento final.")
+            print("\nFalha ao gerar o documento final.")
             
     except KeyboardInterrupt:
         print("\nOperação cancelada pelo usuário.")
